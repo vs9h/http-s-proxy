@@ -1,0 +1,32 @@
+{
+  "name": "http-proxy",
+  "version": "1.0.0",
+  "description": "Proxy for HTTP, HTTPS (Using NET module)",
+  "main": "dist/src",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "tsc": "tsc",
+    "build": "npm-run-all clean tsc",
+    "start": "node .",
+    "dev:start": "npm-run-all build start",
+    "dev": "nodemon --watch src -e ts --exec npm run dev:start"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^17.0.33",
+    "dotenv": "16.0.1",
+    "lodash": "^4.17.21",
+    "raw-socket": "1.7.0",
+    "node": "16.14.2",
+    "typescript": "4.6.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "8.15.0",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "4.1.5"
+  },
+  "author": "vs9lh",
+  "license": "ISC"
+}
